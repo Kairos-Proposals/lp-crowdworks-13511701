@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kairosからのご提案｜株式会社GoodLuck様 オンライン講座LPデザイン・実装パートナーシップ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#0A1726;
+    --navy:#122440;
+    --navy-light:#1C3557;
+    --amber:#E8B65A;
+    --amber-soft:#F2CE86;
+    --teal:#3FA7A0;
+    --ivory:#F4EFE3;
+    --gray-soft:#8FA0B5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--navy-deep);
+    color:var(--ivory);
+    font-family:'Noto Sans JP',sans-serif;
+    font-weight:300;
+    line-height:1.9;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.serif{
+    font-family:'Shippori Mincho B1',serif;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+  .section-num{
+    font-family:'Shippori Mincho B1',serif;
+    font-size:14px;
+    letter-spacing:0.3em;
+    color:var(--amber);
+    display:inline-block;
+    margin-bottom:18px;
+    font-weight:700;
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    overflow:hidden;
+    background:
+      radial-gradient(ellipse at 50% 20%, rgba(232,182,90,0.12), transparent 60%),
+      radial-gradient(ellipse at 80% 80%, rgba(63,167,160,0.10), transparent 55%),
+      linear-gradient(180deg, #060D18 0%, #0A1726 45%, #0F2038 100%);
+  }
+  .stars{
+    position:absolute;
+    inset:0;
+    background-image:
+      radial-gradient(1.5px 1.5px at 10% 15%, rgba(244,239,227,0.8), transparent),
+      radial-gradient(1.5px 1.5px at 22% 60%, rgba(244,239,227,0.6), transparent),
+      radial-gradient(2px 2px at 35% 25%, rgba(232,182,90,0.9), transparent),
+      radial-gradient(1px 1px at 48% 75%, rgba(244,239,227,0.5), transparent),
+      radial-gradient(1.5px 1.5px at 58% 10%, rgba(244,239,227,0.7), transparent),
+      radial-gradient(2px 2px at 68% 55%, rgba(63,167,160,0.8), transparent),
+      radial-gradient(1px 1px at 78% 30%, rgba(244,239,227,0.6), transparent),
+      radial-gradient(1.5px 1.5px at 88% 68%, rgba(232,182,90,0.7), transparent),
+      radial-gradient(1px 1px at 93% 20%, rgba(244,239,227,0.5), transparent),
+      radial-gradient(1.5px 1.5px at 15% 85%, rgba(244,239,227,0.5), transparent),
+      radial-gradient(2px 2px at 40% 90%, rgba(232,182,90,0.6), transparent),
+      radial-gradient(1px 1px at 72% 85%, rgba(244,239,227,0.5), transparent);
+    opacity:0.8;
+  }
+  .lighthouse-glow{
+    position:absolute;
+    top:-10%;
+    left:50%;
+    transform:translateX(-50%);
+    width:900px;
+    height:900px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(232,182,90,0.18) 0%, rgba(232,182,90,0.04) 40%, transparent 70%);
+    filter:blur(10px);
+  }
+  .hero-inner{position:relative;z-index:2;padding:0 24px;}
+  .hero-label{
+    display:inline-block;
+    font-size:12px;
+    letter-spacing:0.35em;
+    color:var(--teal);
+    border:1px solid rgba(63,167,160,0.5);
+    padding:8px 18px;
+    border-radius:30px;
+    margin-bottom:34px;
+    background:rgba(63,167,160,0.06);
+  }
+  .hero h1{
+    font-size:clamp(32px,5.6vw,64px);
+    font-weight:700;
+    line-height:1.5;
+    color:var(--ivory);
+    margin-bottom:22px;
+    letter-spacing:0.03em;
+  }
+  .hero h1 span{
+    color:var(--amber);
+  }
+  .hero p.sub{
+    font-size:clamp(14px,1.9vw,17px);
+    color:var(--gray-soft);
+    font-weight:300;
+    max-width:560px;
+    margin:0 auto;
+    letter-spacing:0.05em;
+  }
+  .hero-foot{
+    margin-top:60px;
+    font-size:12px;
+    letter-spacing:0.2em;
+    color:var(--gray-soft);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+  }
+  .hero-foot .line{width:40px;height:1px;background:linear-gradient(90deg, transparent, var(--amber), transparent);}
+
+  /* ===== SECTION GENERIC ===== */
+  section{
+    padding:110px 0;
+    position:relative;
+  }
+  .sec-title{
+    font-size:clamp(24px,3.4vw,38px);
+    font-weight:700;
+    color:var(--ivory);
+    margin-bottom:28px;
+    line-height:1.6;
+  }
+  .sec-title .mark{color:var(--amber);}
+  .sec-lead{
+    color:var(--gray-soft);
+    font-size:15px;
+    max-width:700px;
+    margin-bottom:50px;
+  }
+
+  /* ===== UNDERSTANDING ===== */
+  .understand{
+    background:
+      radial-gradient(ellipse at 15% 30%, rgba(63,167,160,0.07), transparent 50%),
+      var(--navy);
+  }
+  .understand-box{
+    display:flex;
+    gap:60px;
+    flex-wrap:wrap;
+    align-items:flex-start;
+  }
+  .understand-quote{
+    flex:1;
+    min-width:280px;
+    font-family:'Shippori Mincho B1',serif;
+    font-size:clamp(20px,2.6vw,27px);
+    line-height:2.05;
+    color:var(--amber-soft);
+    border-left:2px solid var(--amber);
+    padding-left:28px;
+  }
+  .understand-text{
+    flex:1;
+    min-width:280px;
+    font-size:15px;
+    color:var(--gray-soft);
+  }
+  .understand-text p{margin-bottom:18px;}
+  .understand-text strong{color:var(--ivory);font-weight:500;}
+
+  /* ===== VALUE CARDS ===== */
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+    gap:26px;
+    margin-top:10px;
+  }
+  .card{
+    background:linear-gradient(160deg, rgba(28,53,87,0.65), rgba(10,23,38,0.5));
+    border:1px solid rgba(232,182,90,0.15);
+    border-radius:10px;
+    padding:34px 28px;
+    transition:all .35s ease;
+    position:relative;
+    overflow:hidden;
+  }
+  .card::before{
+    content:"";
+    position:absolute;
+    top:-40%;right:-40%;
+    width:160px;height:160px;
+    background:radial-gradient(circle, rgba(232,182,90,0.18), transparent 70%);
+    opacity:0;
+    transition:opacity .4s ease;
+  }
+  .card:hover{
+    border-color:rgba(232,182,90,0.55);
+    transform:translateY(-6px);
+    box-shadow:0 18px 40px rgba(0,0,0,0.35);
+  }
+  .card:hover::before{opacity:1;}
+  .card-num{
+    font-family:'Shippori Mincho B1',serif;
+    font-size:13px;
+    color:var(--teal);
+    letter-spacing:0.2em;
+    margin-bottom:16px;
+    display:block;
+  }
+  .card h3{
+    font-size:19px;
+    color:var(--ivory);
+    margin-bottom:14px;
+    font-weight:700;
+    line-height:1.6;
+  }
+  .card p{
+    font-size:13.5px;
+    color:var(--gray-soft);
+  }
+
+  /* ===== FLOW / TIMELINE ===== */
+  .flow{
+    background:var(--navy-deep);
+  }
+  .timeline{
+    position:relative;
+    margin-top:20px;
+  }
+  .timeline::before{
+    content:"";
+    position:absolute;
+    left:21px;
+    top:6px;
+    bottom:6px;
+    width:1px;
+    background:linear-gradient(180deg, var(--amber), rgba(63,167,160,0.5));
+  }
+  .tl-item{
+    position:relative;
+    padding-left:64px;
+    margin-bottom:46px;
+  }
+  .tl-item:last-child{margin-bottom:0;}
+  .tl-dot{
+    position:absolute;
+    left:8px;
+    top:2px;
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    background:var(--navy-light);
+    border:2px solid var(--amber);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Shippori Mincho B1',serif;
+    font-size:12px;
+    color:var(--amber-soft);
+  }
+  .tl-item h3{
+    font-size:17px;
+    color:var(--ivory);
+    margin-bottom:8px;
+    font-weight:700;
+  }
+  .tl-item p{
+    font-size:13.5px;
+    color:var(--gray-soft);
+    max-width:620px;
+  }
+  .tl-item .tag{
+    display:inline-block;
+    margin-top:10px;
+    font-size:11px;
+    letter-spacing:0.15em;
+    color:var(--teal);
+    border:1px solid rgba(63,167,160,0.4);
+    padding:4px 12px;
+    border-radius:20px;
+  }
+
+  /* ===== CLOSING ===== */
+  .closing{
+    text-align:center;
+    background:
+      radial-gradient(ellipse at 50% 100%, rgba(232,182,90,0.14), transparent 60%),
+      linear-gradient(180deg, #0A1726, #060D18);
+    padding:130px 0 110px;
+  }
+  .closing h2{
+    font-size:clamp(26px,4vw,42px);
+    color:var(--ivory);
+    font-weight:700;
+    margin-bottom:22px;
+    line-height:1.6;
+  }
+  .closing h2 span{color:var(--amber);}
+  .closing p{
+    color:var(--gray-soft);
+    font-size:14.5px;
+    max-width:560px;
+    margin:0 auto 46px;
+  }
+  .cta-btn{
+    display:inline-block;
+    background:linear-gradient(135deg, var(--amber), var(--amber-soft));
+    color:#0A1726;
+    font-weight:700;
+    font-size:15px;
+    letter-spacing:0.08em;
+    padding:18px 46px;
+    border-radius:4px;
+    box-shadow:0 10px 30px rgba(232,182,90,0.25);
+    transition:all .3s ease;
+  }
+  .cta-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 14px 36px rgba(232,182,90,0.4);
+  }
+  .closing-sub{
+    margin-top:40px;
+    font-size:12px;
+    letter-spacing:0.2em;
+    color:var(--gray-soft);
+  }
+  footer{
+    text-align:center;
+    padding:30px 0;
+    font-size:11px;
+    letter-spacing:0.2em;
+    color:#45556B;
+    background:#060D18;
+  }
+
+  @media (max-width:768px){
+    section{padding:80px 0;}
+    .understand-box{gap:30px;}
+    .understand-quote{padding-left:20px;font-size:19px;}
+    .hero{min-height:92vh;}
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="stars"></div>
+  <div class="lighthouse-glow"></div>
+  <div class="hero-inner">
+    <span class="hero-label">PROPOSAL FROM KAIROS</span>
+    <h1>知は、灯る前は<br><span>闇の中で眠っている。</span></h1>
+    <p class="sub">株式会社GoodLuck様が手がける「講座プロモーション事業」へ、<br>
+    デザインから実装までを一貫して担うパートナーとして、Kairosよりご提案いたします。</p>
+    <div class="hero-foot">
+      <span class="line"></span>
+      <span>LP DESIGN &amp; DEVELOPMENT PARTNERSHIP</span>
+      <span class="line"></span>
+    </div>
+  </div>
+</section>
+
+<section class="understand">
+  <div class="wrap">
+    <span class="section-num">01 — UNDERSTANDING</span>
+    <h2 class="sec-title">眠っている価値を、<br class="br-mobile">社会の資産に変える。<span class="mark">その最初の扉が、LPです。</span></h2>
+    <div class="understand-box">
+      <div class="understand-quote">
+        「どんなに優れたノウハウも、<br>
+        ビジネスとして正しく設計されなければ、<br>
+        誰にも届かない。」
+      </div>
+      <div class="understand-text">
+        <p>貴社は、企画・コンセプト設計から集客・販売・顧客サポートまでを一気通貫で担い、<strong>「眠っている価値」を社会的な資産へと変える</strong>という、極めて本質的な事業を展開されています。</p>
+        <p>その事業において、LPは単なる「見た目のきれいなページ」ではなく、<strong>講師の想いと受講者の人生が最初に出会う場所</strong>であると、私たちは理解しています。</p>
+        <p>だからこそ必要なのは、デザインだけを切り取る外注先ではなく、<strong>デザインの意図を崩さずコードに落とし込み、公開まで責任を持って伴走できるパートナー</strong>です。Kairosは、その役割を担いたいと考えています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="wrap">
+    <span class="section-num">02 — WHAT KAIROS BRINGS</span>
+    <h2 class="sec-title">Kairosが提供できる<span class="mark">5つの価値</span></h2>
+    <p class="sec-lead">デザイナーとコーダーが分業するのではなく、ひとつのチームが設計から実装まで責任を持つ体制。スピードと一貫性を両立します。</p>
+
+    <div class="cards">
+      <div class="card">
+        <span class="card-num">01 / DESIGN × CODE</span>
+        <h3>デザインと実装の<br>一気通貫体制</h3>
+        <p>ワイヤーからデザインカンプ、コーディングまでを同一チームが担当。「デザイン意図が実装で崩れる」というよくある齟齬を防ぎます。</p>
+      </div>
+      <div class="card">
+        <span class="card-num">02 / CONVERSION</span>
+        <h3>教育・講座コンテンツに<br>強い訴求設計</h3>
+        <p>オンライン講座特有の「信頼形成→共感→決断」という購買心理の流れを理解した上で、構成・導線を設計します。</p>
+      </div>
+      <div class="card">
+        <span class="card-num">03 / SPEED</span>
+        <h3>フルフレックス体制との<br>相性のよい進行管理</h3>
+        <p>非同期でのやり取りを前提に、Zoomやチャットでの短いコミュニケーションでも進行が止まらない運用を設計します。</p>
+      </div>
+      <div class="card">
+        <span class="card-num">04 / TOTAL SUPPORT</span>
+        <h3>バナー・パーツ制作から<br>アップロードまで対応</h3>
+        <p>LP本体だけでなく、販促バナーやパーツ画像の制作、サーバーへの反映、公開前の微調整まで一括でお任せいただけます。</p>
+      </div>
+      <div class="card">
+        <span class="card-num">05 / LONG-TERM</span>
+        <h3>継続案件に耐える<br>保守・改善体制</h3>
+        <p>公開後の修正・改善にも柔軟に対応し、講座ごとに変化する訴求軸のアップデートに継続して伴走します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flow">
+  <div class="wrap">
+    <span class="section-num">03 — HOW WE WORK</span>
+    <h2 class="sec-title">進め方の<span class="mark">イメージ</span></h2>
+    <p class="sec-lead">初回のヒアリングから公開後の調整まで、一つの流れとして設計しています。案件のボリュームに応じて柔軟に調整可能です。</p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot">1</div>
+        <h3>ヒアリング・要件整理</h3>
+        <p>講座のテーマ、ターゲット、訴求の軸、既存素材の有無などをZoomまたはチャットで確認します。</p>
+        <span class="tag">目安：1〜2日</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">2</div>
+        <h3>構成案・デザインカンプ作成</h3>
+        <p>ワイヤーフレームとデザインカンプを提示し、方向性のすり合わせを行います。修正は都度反映します。</p>
+        <span class="tag">目安：3〜5日</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">3</div>
+        <h3>コーディング・実装</h3>
+        <p>レスポンシブ対応を前提に実装。アニメーションやフォーム連携が必要な場合もこの段階で組み込みます。</p>
+        <span class="tag">目安：3〜5日</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">4</div>
+        <h3>アップロード・公開前調整</h3>
+        <p>サーバーへのアップロード、表示確認、微調整を行い、公開前の最終チェックを実施します。</p>
+        <span class="tag">目安：1〜2日</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">5</div>
+        <h3>納品・継続サポート</h3>
+        <p>納品後も、訴求改善やABテスト用の差し替えなど、継続的な運用サポートに対応します。</p>
+        <span class="tag">継続対応可</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <h2>まずは、<span>眠っている価値</span>について、<br>お話しませんか。</h2>
+    <p>自己紹介・実績・制作価格・納期の目安など、応募アンケートの内容を含めてご案内の準備ができています。まずは一度、簡単なご相談からお願いできますと幸いです。</p>
+    <a href="#" class="cta-btn">Kairosに相談する</a>
+    <div class="closing-sub">KAIROS — WEB DESIGN &amp; DEVELOPMENT TEAM</div>
+  </div>
+</section>
+
+<footer>
+  PROPOSED FOR 株式会社GoodLuck BY KAIROS
+</footer>
+
+</body>
+</html>
